@@ -1,0 +1,97 @@
+{% block content %}
+<title>home</title>
+<form method="POST" action="">
+    {% csrf_token %}
+    <body>
+        <div class ="input_container">
+            <fieldset>
+                <legend>النوع</legend>
+            
+                <input type="radio" id="Male" name="Gender"checked value="2">
+                <label for="Male">ذكر</label>
+                <input type="radio" id="Female"name="Gender" value="1">
+                <label for="Female" style="margin-right: 20px;">أنثي</label>
+            </fieldset>
+            <fieldset>
+                <legend>متزوج / متزوجة</legend>
+                <input type="radio" id="Yes" name="married"checked value="1">
+                <label for="Yes">نعم</label>
+                <input type="radio" id="No" name="married" value="2">
+                <label for="No"style="margin-right: 20px;">لا</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>عدد الأطفال</legend>
+                <input type="radio" id="0" name="dependents"checked value="4">
+                <label for="0">٠</label>
+                <input type="radio" id="1" name="dependents" value="1">
+                <label for="1"style="margin-right: 20px;">١</label>
+                <input type="radio" id="2" name="dependents" value="2">
+                <label for="2"style="margin-right: 20px;">٢</label>
+                <input type="radio" id="3" name="dependents" value="3">
+                <label for="3"style="margin-right: 20px;">٣ أو أكثر</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>(خريج)حاصل علي شهادة</legend>
+                <input type="radio" id="Yes" name="Graduate"checked value="2">
+                <label for="Yes">نعم</label>
+                <input type="radio" id="No" name="Graduate" value="1">
+                <label for="No"style="margin-right: 20px;">لا</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>موظف</legend>
+                <input type="radio" id="Yes" name="Self_Employed"checked value="1">
+                <label for="Yes">نعم</label>
+                <input type="radio" id="No" name="Self_Employed" value="2">
+                <label for="No"style="margin-right: 20px;">لا</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>نوع المنطقة السكنيه</legend>
+                <input type="radio" id="Urban" name="Property_Area"checked value="2">
+                <label for="Urban">مدنية</label>
+                <input type="radio" id="Semiurban" name="Property_Area" value="1">
+                <label for="Semiurban"style="margin-right: 20px;">شبه مدنيه</label>
+                <input type="radio" id="Rural" name="Property_Area" value="3">
+                <label for="Rural"style="margin-right: 20px;">قرويه</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>هل لديك تاريخ ائتماني</legend>
+                <input type="radio" id="Yes" name="Credit_History"checked value="0">
+                <label for="Yes">نعم</label>
+                <input type="radio" id="No" name="Credit_History" value="1">
+                <label for="No"style="margin-right: 20px;">لا</label>
+            </fieldset>
+
+            <h1>الراتب الشهري</h1>
+            <input  type="number" id="Salary" name="Salary" value="3000" required="required">
+            
+            
+            <h1>مجموع رواتب المرافقين</h1>
+            <input  type="number" id="CoapplicantIncome" name="CoapplicantIncome" value="3000" required="required">
+            
+
+            
+            <h1>قيمة القرض<p style="font-size: 12px;">( من 10 ألاف إلي 500 ألف )</p></h1>
+            <input  type="number" id="LoanAmount" name="LoanAmount" value="10000" required="required">
+            
+
+            
+            <h1> (بالأيام)مدة السداد</h1>
+            <input  type="number" id="Loan_Amount_Term" name="Loan_Amount_Term" value="360" required="required">
+            <br></br>
+            <br></br>
+            
+        </div>
+    <input class=button type="submit" name="Sign_In" value="Sign In">
+
+    </body>
+
+</form>
+{% endblock content %}
+
+
+
